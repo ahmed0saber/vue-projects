@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Vue</title>
+    </head>
+    <body>
+        <div id="vv">Welcome {{ message }} , your name contains {{ message.length }} letters</div>
+
+        <script src="vue.js"></script>
+        <script>
+            var vm = new Vue({
+                el: '#vv',
+                data: {
+                    message: 'Ahmed Saber'
+                }
+            })
+        </script>
+    </body>
+</html>

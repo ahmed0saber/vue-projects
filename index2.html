@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Vue</title>
+    </head>
+    <body>
+        <div id="vv">
+            <p>Welcome {{ message }} , your name contains {{ message.length }} letters , and your skills are :</p>
+            <ul>
+                <li v-for="(skill,index) in skills">{{ index+1 }} is {{ skill }}</li>
+            </ul>
+            <p>Your friends are :</p>
+            <ol>
+                <li v-for="student in students">{{ student.name }} with {{ student.age }} years old.</li>
+            </ol>
+        </div>
+
+        <script src="vue.js"></script>
+        <script>
+            var vm = new Vue({
+                el: '#vv',
+                data: {
+                    message: 'Ahmed Saber',
+                    skills: ['HTML','CSS','JavaScipt','jQuery','Bootstrap','ElectronJS','VueJS'],
+                    students: [
+                        {
+                            name: 'Ahmed',
+                            age: 21
+                        },
+                        {
+                            name: 'Ali',
+                            age: 20
+                        },
+                        {
+                            name: 'Ashraf',
+                            age: 19
+                        }
+                    ]
+                }
+            })
+        </script>
+    </body>
+</html>
