@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Vue</title>
+    </head>
+    <body>
+        <div id="vv">
+            <p>You clicked the button {{ counter }} times.</p>
+            <button @click="counter++">Click me</button>
+        </div>
+
+        <script src="vue.min.js"></script>
+        <script>
+            var vm = new Vue({
+                el: '#vv',
+                data: {
+                    counter: 0
+                }
+            })
+        </script>
+    </body>
+</html>
