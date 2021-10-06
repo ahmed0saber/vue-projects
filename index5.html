@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Vue</title>
+    </head>
+    <body>
+        <div id="vv">
+            <p>Your name is {{ name }}</p>
+            <input type="text" v-model="name"><br>
+            <input type="checkbox" v-model="checked">{{checked}}<br><br>
+            <p>Who are you ??</p>
+            <input type="checkbox" id="Ahmed" value="Ahmed" v-model="checkedNames">
+            <label for="Ahmed">Ahmed</label>
+            <input type="checkbox" id="Student" value="Student" v-model="checkedNames">
+            <label for="Student">Student</label>
+            <input type="checkbox" id="Web developer" value="Web developer" v-model="checkedNames">
+            <label for="Web developer">Web developer</label>
+            <br>
+            <span>You picked: {{ checkedNames }}</span><br><br>
+            <input type="radio" id="one" value="One" v-model="picked">
+            <label for="one">One</label>
+            <br>
+            <input type="radio" id="two" value="Two" v-model="picked">
+            <label for="two">Two</label>
+            <br>
+            <span>Picked: {{ picked }}</span>
+        </div>
+
+        <script src="vue.min.js"></script>
+        <script>
+            var vm = new Vue({
+                el: '#vv',
+                data: {
+                    name: 'Ahmed Saber',
+                    checked: true,
+                    checkedNames: [],
+                    picked: ''
+                }
+            })
+        </script>
+    </body>
+</html>
