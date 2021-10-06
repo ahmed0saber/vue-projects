@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Vue</title>
+    </head>
+    <body>
+        <div id="vv">
+            <counter-app></counter-app>
+            <counter-app></counter-app>
+        </div>
+
+        <script src="vue.js"></script>
+        <script>
+            Vue.component('counter-app',{
+                data: function(){
+                    return {
+                        name: 'Ahmed',
+                        count: 0
+                    }
+                },
+                template: `<p @click='count++'>Hello {{ name }} , You clicked this paragraph {{ count }} times.`
+            })
+            var vm = new Vue({
+                el: '#vv'
+            })
+        </script>
+    </body>
+</html>
