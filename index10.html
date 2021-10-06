@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Vue</title>
+    </head>
+    <body>
+        <div id="vv">
+            <p>Your tasks are :</p>
+            <ol>
+                <li v-for="(task,index) in tasks">{{ tasks[index] }}</li>
+            </ol>
+        </div>
+
+        <script src="vue.min.js"></script>
+        <script>
+            var vm = new Vue({
+                el: '#vv',
+                data: {
+                    tasks: {
+                        0: "Learn Vue JS",
+                        1: "Learn PHP",
+                        2: "Learn Laravel",
+                        3: "Learn Flutter"
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
