@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Vue</title>
+    </head>
+    <body>
+        <div id="vv">
+            <my-app :age='age'></my-app>
+        </div>
+
+        <script src="vue.js"></script>
+        <script>
+            /*Local component*/
+            var MyApp = {
+                data: function(){
+                    return {
+                        name: 'Ahmed'
+                    }
+                },
+                props: ['age'],
+                template: `<P>My name is {{ name }} and I'm {{ age }} years old.`
+            }
+
+            var vm = new Vue({
+                el: '#vv',
+                data: {
+                    age: 20
+                },
+                /*Globalize local components*/
+                components:{
+                    'my-app': MyApp
+                }
+            })
+        </script>
+    </body>
+</html>
